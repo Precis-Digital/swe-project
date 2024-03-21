@@ -1,13 +1,7 @@
 """This is a linting example"""
 
-first_number = int(input("Input first number: "))
-second_number = int(input("Input second number: "))
 
-
-operator = input("Operator: ")
-
-
-def print_result():
+def print_result(first_number: int, second_number: int, operator: str) -> None:
     """Prints the result of the operation."""
     print("Result: ", end="")
     if operator == "+":
@@ -21,7 +15,15 @@ def print_result():
 
 
 def main():
-    print_result()
+    first_number = int(input("Input first number: "))
+    second_number = int(input("Input second number: "))
+    operator = input("Operator: ")
+
+    print_result(
+        first_number=first_number,
+        second_number=second_number,
+        operator=operator,
+    )
 
 
 if __name__ == "__main__":
